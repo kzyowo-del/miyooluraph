@@ -27,7 +27,7 @@ jobs:
           python3 deobf/deob.py ../input.lua -o ../output_clean.lua 2>&1
       
       - name: Upload result
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: deobfuscated
           path: output_clean.lua
