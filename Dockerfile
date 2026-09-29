@@ -11,4 +11,6 @@ COPY . .
 
 RUN cd deobf && python3 deobf/deob.py /app/input.lua -o /app/output_clean.lua 2>&1 || true
 
-CMD ["cat", "output_clean.lua"]
+EXPOSE 8080
+
+CMD ["python3", "-m", "http.server", "8080"]
